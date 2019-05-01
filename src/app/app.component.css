@@ -1,0 +1,11 @@
+.box{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url(../assets/img/blur-background.jpg);
+    background-attachment: fixed;
+}
+.boxContent{
+    padding: 0 15px;
+    /* height: 100vh; */
+    color: antiquewhite;
+}

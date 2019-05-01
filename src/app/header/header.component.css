@@ -1,0 +1,96 @@
+.tophead{
+    background-color:rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 6px;
+    text-align: center;
+}
+.headbox{
+    margin-top: 0;
+}
+    .headbox .name{
+        padding: 20px 10px;
+        color: #3FCDFF;
+    }
+    .headbox .name p:first-child{
+        color: #3FCDFF;
+        text-transform: uppercase;
+        text-shadow: 0 0 3px #000, 0 0 3px #000;
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 55px;
+        letter-spacing: 2px
+    }
+    .headbox .name p:nth-child(2){
+        color: white;
+        text-shadow: 0 0 3px #000, 0 0 3px #000;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 0px;
+    }
+    .noPadding{
+        padding: 0 !important;
+    }
+    .headbox .aboutMe p:first-child{
+        color: #fff;
+        margin-top: 87px;
+        font-weight: bold;
+        margin-left: -125px;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    .headbox .aboutMe p:nth-child(2){
+        color: rgb(13, 145, 168);
+        padding: 0px 0px 0px 5px;
+        display: inline-block;
+        text-transform: capitalize;
+        font-style: italic;
+        font-size: 14px;
+    }
+    .headbox .aboutMe p:nth-child(3){
+        color: #fff;
+        margin-top: -15px;
+        text-transform: capitalize;
+        font-style: italic;
+        margin-left: -122px;
+        font-size: 13px;
+        text-align: justify;
+    }
+    .headbox .contactMe {
+        color: white;
+        line-height: 17px;
+        padding-top: 20px;
+    }
+    .headbox .contactMe .property{
+        text-transform: capitalize;
+    }
+    .headbox .contactMe .value{
+        text-transform: capitalize;
+    }
+    .headbox .contactMe .row{
+        margin: 10px 0;
+    }
+.photoCV{
+    border-radius: 50%;
+    width: 215px;
+    margin: 20px;
+    border: 5px solid rgba(0, 0, 0, 0.4);
+}
+.barS{
+    border-bottom: 2px solid #3FCDFF;
+}
+i{
+    margin: 0 10px;
+}
+.fa-skype{
+    color: #00AFF0;
+}
+.fa-linkedin-square{
+    color: #069;
+}
+.fa-envelope{
+    color: #E15242;
+}
+.fa-phone{
+    color: lime;
+}

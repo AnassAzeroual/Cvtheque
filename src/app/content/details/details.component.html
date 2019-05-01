@@ -1,0 +1,45 @@
+<div class="container">
+  <!--=============================================-->
+  <div class="row p-2">
+    <div class="col-md-4 p-2">
+      <img class="img-fluid" src="{{obj.logoS}}" width="100">
+    </div>
+    <div class="col-md-4 ling bar">
+      <div><span>Société :</span> <span>{{obj.nameS}}</span></div>
+      <div><span>Post :</span> <span>{{obj.post}}</span></div>
+      <div><span>Contrat :</span> <span>{{obj.contrat}}</span></div>
+    </div>
+    <div class="col-md-4 ling bar">
+      <div><span>Date de Départ : </span> <span>{{obj.dateD}}</span></div>
+      <div><span>Date de Fin : </span> <span>{{obj.dateE}}</span></div>
+    </div>
+  </div>
+  <div class="separ"></div>
+  <!--=============================================-->
+  <div class="row">
+    <div class="col-md-8">
+        <div class="p-2">
+            {{obj.descr}}
+          </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-2">
+          <p class="tech text-white">les technologies utilié !</p>
+      </div>
+      <div class="text-center">
+        <p class="inlBlo" *ngFor="let one of obj.techno">
+          <img src="{{one.url}}" alt="{{one.name}}" title="{{one.name}}" width="40">
+        </p>
+      </div>
+      <div class="p-2">
+          <p class="tech text-white">References </p>
+      </div>
+      <div *ngFor="let proj of obj.links">
+          <a href="{{proj.url}}" class="btn-link link" title="{{proj.name}}">{{proj.name}}</a>
+      </div>
+    </div>
+  </div>
+  
+  <!--=============================================-->
+ 
+</div> <!--  // end container  -->
