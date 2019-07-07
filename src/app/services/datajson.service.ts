@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class DatajsonService {
 
   private jobTitle: string = "Analyste Développeur";
-  private status: string = "disponible"; // "disponible" | "fgfg" | "ffff" ;
+  private status: string = "disponible";
   private details: string = "La curiosité de savoir c'est le secret du succès motivé, créatif, enthousiaste et perspicace";
   private dataExperiences = [
     {

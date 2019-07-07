@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map, catchError } from 'rxjs/operators';
 import { ServiceService } from '../services/service.service';
 
 @Component({
@@ -11,12 +12,16 @@ export class HeaderComponent implements OnInit {
  title:string
  details:string
  status:string
+  jobTitle: any;
+  etat: any;
+  desc: any;
   constructor( private data:ServiceService) { }
 
   ngOnInit() {
     this.dataAboutMe = this.data.aboutMe()
-    this.title = this.dataAboutMe.filter( x => x.title)
-    console.log(this.dataAboutMe.filter( x => x.title))
+    this.title = this.dataAboutMe["0"]['title']
+    this.details = this.dataAboutMe["0"]['desc']
+    this.status = this.dataAboutMe["0"]['etat']
   }
 
 }
