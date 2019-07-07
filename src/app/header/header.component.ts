@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'header',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+ dataAboutMe:any
+ title:string
+ details:string
+ status:string
+  constructor( private data:ServiceService) { }
 
   ngOnInit() {
+    this.dataAboutMe = this.data.aboutMe()
+    this.title = this.dataAboutMe.filter( x => x.title)
+    console.log(this.dataAboutMe.filter( x => x.title))
   }
 
 }

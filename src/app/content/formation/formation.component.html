@@ -1,3 +1,18 @@
-<p>
-  formation works!
-</p>
+<div class="my-2" *ngFor="let data of dataExperiences">
+  <a [routerLink]="['/details', data.id_obj ]" class="globalBoxLink">
+    <div class="boxexper slow" id="{{data.id_obj}}">
+      <!--=========================================================-->
+      <h2 class="titlexper">
+        <span class="date">{{data.dateD}}</span> <i class="h5 slach"> / </i> <span class="date">{{data.dateE}}</span>
+        <p class="local">{{data.localS}} </p>
+        <p class="separ"></p>
+      </h2>
+      <!--===============================-->
+      <div class="containerIMG"><img class="img-job" src="{{data.logoS}}"></div>
+      <span class="societe">{{data.nameS}}</span> <small class="poste">{{data.post}}</small>
+      <!--===============================-->
+      <div class="details">{{data.descr}}</div>
+      <!--=========================================================-->
+    </div>
+  </a>
+</div>

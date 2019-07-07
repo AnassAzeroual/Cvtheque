@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
   selector: 'app-formation',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formation.component.css']
 })
 export class FormationComponent implements OnInit {
+  dataExperiences: any;
 
-  constructor() { }
+  constructor(private srv:ServiceService) { }
 
   ngOnInit() {
+    this.dataExperiences = this.srv.getAllData("for");
   }
 
 }

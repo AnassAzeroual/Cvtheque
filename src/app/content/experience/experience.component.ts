@@ -11,7 +11,7 @@ export class ExperienceComponent implements OnInit {
   constructor(private srv:ServiceService) { }
 
   ngOnInit() {
-    this.dataExperiences = this.srv.getAllData();
+    this.dataExperiences = this.srv.getAllData("exp");
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="tophead"> 
-    <i class="fa fa-phone"></i><span>(+212)628466465</span>
+    <i class="fa fa-phone"></i><span>(+212) 628 466 465</span>
     <i class="fa fa-envelope"></i><span>Azeroual.anss2015@gmail.com</span>
     <i class="fa fa-skype"></i><span>Azeroual Anass IT</span>
     <i class="fa fa-linkedin-square"></i><span>Azeroual Anass IT</span>
@@ -11,7 +11,9 @@
   <div class="headbox bgColor1">
     <div class="row">
       <div class="col-md-3">
-        <img src="https://picsum.photos/200" class="photoCV" alt="Photo Azeroual Anass">
+        <div class="box_avatar">
+          <img src="assets/img/avatar/avatar.jpg" class="photoCV" alt="Photo Azeroual Anass">
+        </div>
       </div>
       <div class="col-md-3 noPadding">
         <div class="name">
@@ -21,10 +23,9 @@
       </div>
       <div class="col-md-3">
         <div class="aboutMe">
-          <p>web développeur </p>
-          <p>disponible</p>
-          <p>La curiosité de savoir c'est le secret du succès
-              motivé, créatif, enthousiaste et perspicace. </p>
+          <!-- <p> {{dataAboutMe[title]}} </p>
+          <p>{{dataAboutMe[status]}}</p>
+          <p>{{dataAboutMe[details]}}. </p> -->
         </div>
       </div>
       <div class="col-md-3">
@@ -40,12 +41,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-        <div class="col-md-3 text-center p-2"> <a [routerLink]="[ '/formation' ]" class="btn-1 btn-style btn-animated">Formation</a> </div>
-        <div class="col-md-3 text-center p-2"> <a [routerLink]="[ '/experience' ]" class="btn-1 btn-style btn-animated">Experience</a> </div>
-        <div class="col-md-3 text-center p-2"> <a [routerLink]="[ '/contact' ]" class="btn-1 btn-style btn-animated">Contact Me </a> </div>
-        <div class="col-md-3 text-center p-2"> <a href="#" class="btn-1 btn-style btn-animated">More about me</a> </div>
-    </div>
+    <nav></nav>
   </div>
   
   <div class="barS"></div>

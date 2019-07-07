@@ -10,6 +10,7 @@ import { FormationComponent } from './content/formation/formation.component';
 import { ExperienceComponent } from './content/experience/experience.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { DetailsComponent } from './content/details/details.component';
+import { NavComponent } from './nav/nav.component';
 
 const CVRoutes: Routes = [
   {path : "", component: ExperienceComponent},
@@ -27,7 +28,8 @@ const CVRoutes: Routes = [
     FormationComponent,
     ExperienceComponent,
     ContactComponent,
-    DetailsComponent
+    DetailsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

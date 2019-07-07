@@ -7,12 +7,15 @@ import { DatajsonService } from './datajson.service';
 export class ServiceService {
   private selectedData: any;
   dataExperiences: any;
+  dataaboutMe: any;
 
   constructor(private data: DatajsonService) {
     this.dataExperiences = data.setDataJson();
+    // console.log(this.data.getDataAboutMe())
+    this.dataaboutMe = data.getDataAboutMe();
   }
-  getAllData() {
-    return this.dataExperiences;
+  getAllData(targetType: string) {
+    return this.dataExperiences.filter( x => x.type_obj == targetType);
   }
 
   setDataByID(id: string) {
@@ -20,5 +23,8 @@ export class ServiceService {
   }
   getDataByID() {
     return this.selectedData;
+  }
+   aboutMe(){
+    return this.dataaboutMe
   }
 }
