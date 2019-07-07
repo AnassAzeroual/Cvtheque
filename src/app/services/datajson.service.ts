@@ -13,8 +13,8 @@ export class DatajsonService {
     {
       id_obj: '1',
       type_obj: "exp",
-      dateD : '2018-02-02',
-      dateE : '2018-02-03',
+      dateD : '2018-10-08',
+      dateE : '2019-04-30',
       nameS : 'Educa',
       localS : 'Casablanca, Tamaris',
       logoS : '../../../assets/img/logoS/agenda.png',
