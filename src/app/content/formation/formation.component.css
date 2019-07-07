@@ -1,0 +1,58 @@
+.globalBoxLink{
+    text-decoration: none;
+}
+.boxexper{
+    /* border-bottom: 1px solid lime; */
+    background-color: #525659;
+    padding: 0px 20px 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.my-2:hover .boxexper{
+    transform: translateX(8px);
+    box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.5);
+}
+/* .my-2{
+    border: 1px solid red;
+} */
+.date{
+    color: aqua;
+    font-size: 20px;
+}
+.poste{
+    color: #eee;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+.slach{
+    color: navajowhite;
+}
+.local{
+    position: relative;
+    font-size: 15px;
+    top: 15px;
+    float: right;
+    color: navajowhite;
+}
+.societe{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fef;
+    margin-left: 10px;
+}
+.containerIMG{
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.img-job{
+    height: 50px;
+}
+.details{
+    text-align: justify;
+    color: #eee;
+    font-size: 14px;
+}

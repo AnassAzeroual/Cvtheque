@@ -1,0 +1,22 @@
+.ling{
+    line-height: 40px;
+}
+.bar{
+    border-left: 1px solid silver;
+}
+.inlBlo{
+    display: inline-block;
+    margin: 5px;
+}
+.tech{
+    margin: 0;
+}
+.link{
+    margin: 5px;
+    text-align: center;
+    display: block;
+}
+.titles{
+    color: #81D4FA;
+    margin: 0 6px 0px 0px;
+}

@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.barS{
+    border-bottom: 2px solid #3FCDFF;
+}
+.separ{
+    border-bottom: 1px solid silver;
+    margin: 0;
+}
+.bgColor1{
+    background-color:rgb(52,57,60);
+}
+.slow{
+    transition: all .4s ease-in-out;
+}
+.btn-1{
+    padding: 0px 12px;
+    background-color: #007BFF;
+    transition: all .2s;
+    display: inline-block;
+}
+.btn-1:link,
+.btn-1:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 100px;
+    position: relative;
+}
+.btn-1:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+.btn-1:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.btn-1::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn-style::after{
+    background: #007BFF;
+}
+.btn-1:hover::after {
+    transform: scale(1.4) scale(1.6);
+    opacity: 0;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
