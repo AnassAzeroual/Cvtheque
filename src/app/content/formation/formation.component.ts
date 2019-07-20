@@ -12,7 +12,9 @@ export class FormationComponent implements OnInit {
   constructor(private srv:ServiceService) { }
 
   ngOnInit() {
-    this.dataExperiences = this.srv.getAllData("for");
+    this.srv.getAllData("for").subscribe(formations => {
+      this.dataExperiences = formations
+    })
   }
 
 }

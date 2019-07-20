@@ -8,19 +8,22 @@ import { ServiceService } from 'src/app/services/service.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  private Param_id_user: any;
-  private obj: any;
+  obj: any;
+  danaAnimated: any;
+  
 
   constructor(private route: ActivatedRoute,private srv:ServiceService) { }
 
   ngOnInit() {
     this.get_params();
-    this.srv.setDataByID(this.Param_id_user);
-    this.obj = this.srv.getDataByID()
+    this.obj.subscribe(res => {
+      this.obj = res[0]
+    })
+
   }
 
   private get_params() {
-    this.route.params.subscribe(params => { this.Param_id_user = params['id']; });
+    this.route.params.subscribe(params => { this.obj = this.srv.getDataByID(params['id']) });
   }
 
 }

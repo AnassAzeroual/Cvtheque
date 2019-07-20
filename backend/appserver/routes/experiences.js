@@ -1,15 +1,20 @@
-import { Injectable } from '@angular/core';
+var express = require('express');
+var router = express.Router();
 
-@Injectable({
-  providedIn: 'root'
-})
+/* GET users listing. */
+router.post('/', function(req, res, next) {
+  
+  let responsedata = dataExperiences.filter(function(item) {
+    return item.type_obj == req.body.data;
+  });
+  if (responsedata.length > 0) {
+    res.send(responsedata);
+  } else {
+    res.status(203).json({'response': responsedata.length})
+  }
+});
 
-export class DatajsonService {
-
-  private jobTitle: string = "Analyste Développeur";
-  private status: string = "disponible";
-  private details: string = "La curiosité de savoir c'est le secret du succès motivé, créatif, enthousiaste et perspicace";
-  private dataExperiences = [
+let dataExperiences = [
     {
       id_obj: '1',
       type_obj: "exp",
@@ -82,19 +87,5 @@ export class DatajsonService {
              ],
       }
   ];
-  private dataAboutMe = [
-    {
-      id: "1",
-      title: this.jobTitle,
-      etat: this.status,
-      desc: this.details,
-    }
-  ];
-  constructor() { }
-  setDataJson(){
-    return this.dataExperiences
-  }
-   getDataAboutMe(){
-    return this.dataAboutMe
-  }
-}
+
+module.exports = router;

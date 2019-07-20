@@ -7,11 +7,13 @@ import { ServiceService } from 'src/app/services/service.service';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
- private dataExperiences = [];
+ private dataExperiences:Object;
   constructor(private srv:ServiceService) { }
 
   ngOnInit() {
-    this.dataExperiences = this.srv.getAllData("exp");
+    this.srv.getAllData("exp").subscribe(experiences => {
+      this.dataExperiences = experiences
+    })
   }
 
 }

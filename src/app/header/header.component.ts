@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map, catchError } from 'rxjs/operators';
 import { ServiceService } from '../services/service.service';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'header',
@@ -22,6 +23,21 @@ export class HeaderComponent implements OnInit {
     this.title = this.dataAboutMe["0"]['title']
     this.details = this.dataAboutMe["0"]['desc']
     this.status = this.dataAboutMe["0"]['etat']
+
+    const options = {
+      strings: [
+       'Bienvenu(e)',
+       'je me présent : Je suis Développeur Analyste',
+       'je me présent : J\'ai actuellement plus de 2 ans en développement',
+       'Mon objectif est : Réaliser des projets et satisfaire les clients',
+       'Je serai honoré de votre réponse positive'
+      ],
+      typeSpeed: 70,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: false
+    };
+    const typed = new Typed('#typed_element', options);
   }
 
 }

@@ -24,8 +24,10 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.7.3",
     "core-js": "^2.5.4",
+    "lodash.mergewith": "^4.6.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
+    "typed.js": "^2.0.10",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {

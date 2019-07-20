@@ -11,6 +11,7 @@ import { ExperienceComponent } from './content/experience/experience.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { DetailsComponent } from './content/details/details.component';
 import { NavComponent } from './nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const CVRoutes: Routes = [
   {path : "", component: ExperienceComponent},
@@ -33,6 +34,7 @@ const CVRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       CVRoutes,
       { useHash: true }

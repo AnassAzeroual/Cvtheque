@@ -1,30 +1,36 @@
 import { Injectable } from '@angular/core';
-import { DatajsonService } from './datajson.service';
+import { async } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  private selectedData: any;
-  dataExperiences: any;
-  dataaboutMe: any;
+  private jobTitle: string = "Analyste Développeur";
+  private status: string = "disponible";
+  private details: string = "La curiosité de savoir c'est le secret du succès motivé, créatif, enthousiaste et perspicace";
+ 
+  
+  private dataAboutMe = [
+    {
+      id: "1",
+      title: this.jobTitle,
+      etat: this.status,
+      desc: this.details,
+    }
+  ];
+  constructor(private http:HttpClient) {}
 
-  constructor(private data: DatajsonService) {
-    this.dataExperiences = data.setDataJson();
-    // console.log(this.data.getDataAboutMe())
-    this.dataaboutMe = data.getDataAboutMe();
+
+ getAllData(targetType: string) {
+    return this.http.post("http://localhost:3000/experiences/",{"data": targetType})
   }
-  getAllData(targetType: string) {
-    return this.dataExperiences.filter( x => x.type_obj == targetType);
+  
+  getDataByID(id: string) {
+    return this.http.post("http://localhost:3000/details/",{"idObj": id})
   }
 
-  setDataByID(id: string) {
-    this.selectedData = this.dataExperiences.find( x => x.id_obj == id);
-  }
-  getDataByID() {
-    return this.selectedData;
-  }
    aboutMe(){
-    return this.dataaboutMe
+    return this.dataAboutMe
   }
 }
