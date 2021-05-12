@@ -22,7 +22,7 @@
     "@angular/router": "^7.2.3",
     "@fortawesome/fontawesome-free": "^5.6.3",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "core-js": "^2.5.4",
     "lodash.mergewith": "^4.6.2",
     "rxjs": "~6.4.0",
